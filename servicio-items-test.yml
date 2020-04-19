@@ -2,4 +2,4 @@ server:
   port: 0
 
 configuracion:
-  texto: valor por defecto
+  texto: valor de test
