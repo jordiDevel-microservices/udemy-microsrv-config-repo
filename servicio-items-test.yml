@@ -1,5 +1,2 @@
-server:
-  port: 0
-
 configuracion:
   texto: valor de test
