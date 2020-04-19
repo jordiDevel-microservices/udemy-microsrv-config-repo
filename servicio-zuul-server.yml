@@ -1,13 +1,20 @@
 server:
-  port: 0
-    
+  port: 8080
+
 eureka:
   client:
     service-url:
       defaultZone: http://localhost:8761/eureka
-  instance:
-    instance-id: ${spring.application.name}:${spring.application_instance_id:${random.value}}
-      
+
+zuul:
+  routes:
+    productos:
+      service-id: servicio-productos
+      path: /api/productos/**
+    items:
+      service-id: servicio-items
+      path: /api/items/**
+
 hystrix:
   command:
     default:
@@ -19,6 +26,3 @@ hystrix:
 ribbon:
   ConnectTimeout: 3000
   ReadTimeout: 60000
-
-configuracion:
-  texto: valor por defecto
