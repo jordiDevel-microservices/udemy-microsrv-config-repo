@@ -7,3 +7,12 @@ eureka:
       defaultZone: http://localhost:8761/eureka
   instance:
     instance-id: ${spring.application.name}:${spring.application_instance_id:${random.value}}
+
+config:
+  security:
+    oauth:
+      client:
+        id: frontendapp
+        secret: 12345
+    jwt:
+      key: algun_codigo_super_secreto_como_12345

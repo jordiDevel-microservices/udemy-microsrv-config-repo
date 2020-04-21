@@ -35,3 +35,8 @@ hystrix:
 ribbon:
   ConnectTimeout: 3000
   ReadTimeout: 60000
+
+config:
+  security:
+    jwt:
+      key: algun_codigo_super_secreto_como_12345
