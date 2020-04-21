@@ -38,5 +38,6 @@ ribbon:
 
 config:
   security:
-    jwt:
-      key: algun_codigo_super_secreto_como_12345
+    oauth:
+      jwt:
+        key: algun_codigo_super_secreto_como_12345

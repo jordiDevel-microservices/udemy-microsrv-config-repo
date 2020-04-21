@@ -14,5 +14,5 @@ config:
       client:
         id: frontendapp
         secret: 12345
-    jwt:
-      key: algun_codigo_super_secreto_como_12345
+      jwt:
+        key: algun_codigo_super_secreto_como_12345
