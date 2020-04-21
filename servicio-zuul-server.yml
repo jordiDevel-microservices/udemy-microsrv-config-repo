@@ -19,6 +19,10 @@ zuul:
     usuarios:
       service-id: servicio-usuarios
       path: /api/usuarios/**
+    oauth:
+      service-id: servicio-oauth-server
+      path: /api/security/**
+      sensitive-headers: Cookie,Set-Cookie
 
 hystrix:
   command:
