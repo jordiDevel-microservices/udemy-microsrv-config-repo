@@ -36,5 +36,10 @@ spring:
         jdbc:
           lob:
             non_contextual_creation: true
-            
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka-server:8761/eureka
+
 logging.level.org.hibernate.SQL: debug
