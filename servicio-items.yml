@@ -32,3 +32,16 @@ spring:
   zipkin:
     sender:
       type: rabbit
+
+---
+
+spring:
+  profiles: docker
+
+configuracion:
+  texto: valor por defecto en docker
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka-server:8761/eureka
