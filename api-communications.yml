@@ -22,36 +22,14 @@ spring:
 logging:
   level:
     root: ERROR
-    org.springframework.jdbc: ERROR
     org.springframework.web: INFO
-    org.hibernate.SQL: DEBUG
-  file: /var/logs/api-profile-generator.log
+    com.sun.mail.smtp: ERROR
+  file: /var/logs/api-communications.log
 
 ---
 
 spring:
   profiles: local
-
-user:
-  datasource:      
-    jdbcUrl: jdbc:h2:mem:user_db
-    username: sa
-    password:
-    driverClassName: org.h2.Driver
-
-spain:
-  datasource:
-    jdbcUrl: jdbc:h2:mem:geo_esp_db
-    username: sa
-    password:
-    driverClassName: org.h2.Driver
-
-portugal:
-  datasource:
-    jdbcUrl: jdbc:h2:mem:geo_pt_db
-    username: sa
-    password:
-    driverClassName: org.h2.Driver
 
 ---
 
