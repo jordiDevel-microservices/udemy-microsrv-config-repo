@@ -29,8 +29,8 @@ logging:
 
 ---
 
-#spring:
-  #profiles: local
+spring:
+  profiles: local
   #h2:
     #console:
       #enabled: true
