@@ -25,6 +25,13 @@ logging:
   file: /var/logs/api-communications.log
 
 mail:
+  smtp:
+    host: smtp.1and1.es
+    port: 587
+    auth: true
+    starttls:
+      enable: true 
+    localhost: ec2
   from: 
     user: noreply@inatlas.com
     password: aragon224
