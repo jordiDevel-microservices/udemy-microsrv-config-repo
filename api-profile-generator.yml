@@ -37,21 +37,21 @@ spring:
 
 user:
   datasource:      
-      url: jdbc:h2:mem:user_db
-      username: sa
-      password:
-      driverClassName: org.h2.Driver
+    jdbcUrl: jdbc:h2:mem:user_db
+    username: sa
+    password:
+    driverClassName: org.h2.Driver
 
 spain:
   datasource:
-      url: jdbc:h2:mem:geo_esp_db
-      username: sa
-      password:
-      driverClassName: org.h2.Driver
+    jdbcUrl: jdbc:h2:mem:geo_esp_db
+    username: sa
+    password:
+    driverClassName: org.h2.Driver
 
 portugal:
   datasource:
-    url: jdbc:h2:mem:geo_pt_db
+    jdbcUrl: jdbc:h2:mem:geo_pt_db
     username: sa
     password:
     driverClassName: org.h2.Driver
