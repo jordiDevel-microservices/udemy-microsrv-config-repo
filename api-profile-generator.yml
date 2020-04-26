@@ -17,21 +17,7 @@ spring:
   zipkin:
     base-url: http://localhost:9411
   datasource:
-    user:
-      url: jdbc:h2:mem:user_db
-      username: sa
-      password:
-      driverClassName: org.h2.Driver
-    geoesp:
-        url: jdbc:h2:mem:geo_esp_db
-        username: sa
-        password:
-        driverClassName: org.h2.Driver
-    geopt:
-      url: jdbc:h2:mem:geo_pt_db
-      username: sa
-      password:
-      driverClassName: org.h2.Driver
+    
 
 logging:
   level:
@@ -49,6 +35,27 @@ spring:
     console:
       enabled: true
       path: /h2
+
+user:
+  datasource:      
+      url: jdbc:h2:mem:user_db
+      username: sa
+      password:
+      driverClassName: org.h2.Driver
+
+spain:
+  datasource:
+      url: jdbc:h2:mem:geo_esp_db
+      username: sa
+      password:
+      driverClassName: org.h2.Driver
+
+portugal:
+  datasource:
+    url: jdbc:h2:mem:geo_pt_db
+    username: sa
+    password:
+    driverClassName: org.h2.Driver
 
 ---
 
