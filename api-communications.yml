@@ -26,6 +26,39 @@ logging:
     com.sun.mail.smtp: ERROR
   file: /var/logs/api-communications.log
 
+  mail.from=noreply@inatlas.com
+  mail.from.password=aragon224
+
+mail:
+  from: noreply@inatlas.com
+    password: aragon224
+  support:
+    einforma: jordi.medina@inatlas.com
+    production: jordi.medina@inatlas.com
+  team:
+    leader: roberto.zazo@inatlas.com
+  test:
+    leader: mauri.arevalo@inatlas.com
+  developers:
+    default: jordi.medina@inatlas.com
+  inatlas:
+    informa:
+      test: jordi.medina@inatlas.com
+  newcredits:
+    confirmation:
+      informa:
+        spain: jordi.medina@inatlas.com
+          cc: jordi.medina@inatlas.com
+        portugal: jordi.medina@inatlas.com
+          cc: jordi.medina@inatlas.com
+  credit:
+    requested:
+      informa:
+        spain: jordi.medina@inatlas.com
+          cc: jordi.medina@inatlas.com
+        portugal: jordi.medina@inatlas.com
+          cc: jordi.medina@inatlas.com
+
 ---
 
 spring:
