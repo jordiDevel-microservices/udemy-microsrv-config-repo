@@ -1,0 +1,67 @@
+server:
+  port: 0
+  
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+  instance:
+    instance-id: ${spring.application.name}:${spring.application_instance_id:${random.value}}
+    leaseRenewalIntervalInSeconds: 10
+    preferIpAddress: true
+
+spring:
+  sleuth:
+    sampler:
+      probability: 1.0
+  zipkin:
+    base-url: http://localhost:9411
+  datasource:
+    user:
+      url: jdbc:h2:mem:user_db
+      username: sa
+      password:
+      driverClassName: org.h2.Driver
+    geoesp:
+        url: jdbc:h2:mem:geo_esp_db
+        username: sa
+        password:
+        driverClassName: org.h2.Driver
+    geopt:
+      url: jdbc:h2:mem:geo_pt_db
+      username: sa
+      password:
+      driverClassName: org.h2.Driver
+
+logging:
+  level:
+    root: ERROR
+    org.springframework.jdbc: ERROR
+    org.springframework.web: INFO
+    org.hibernate: DEBUG
+  file: /var/logs/api-profile-generator.log
+
+---
+
+spring:
+  profiles: local
+  h2:
+    console:
+      enabled: true
+      path: /h2
+
+---
+
+spring:
+  profiles: docker
+  zipkin:
+    base-url: http://zipkin-server:9411
+  rabbitmq:
+    host: rabbitmq38
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka-server:8761/eureka
+
+
