@@ -16,8 +16,6 @@ spring:
       probability: 1.0
   zipkin:
     base-url: http://localhost:9411
-  datasource:
-    
 
 logging:
   level:
@@ -27,7 +25,8 @@ logging:
   file: /var/logs/api-communications.log
 
 mail:
-  from: noreply@inatlas.com
+  from: 
+    user: noreply@inatlas.com
     password: aragon224
   support:
     einforma: jordi.medina@inatlas.com
@@ -44,16 +43,20 @@ mail:
   newcredits:
     confirmation:
       informa:
-        spain: jordi.medina@inatlas.com
+        spain: 
+          to: jordi.medina@inatlas.com
           cc: jordi.medina@inatlas.com
-        portugal: jordi.medina@inatlas.com
+        portugal: 
+          to: jordi.medina@inatlas.com
           cc: jordi.medina@inatlas.com
   credit:
     requested:
       informa:
-        spain: jordi.medina@inatlas.com
+        spain: 
+          to: jordi.medina@inatlas.com
           cc: jordi.medina@inatlas.com
-        portugal: jordi.medina@inatlas.com
+        portugal: 
+          to: jordi.medina@inatlas.com
           cc: jordi.medina@inatlas.com
 
 ---
@@ -74,5 +77,3 @@ eureka:
   client:
     service-url:
       defaultZone: http://eureka-server:8761/eureka
-
-
