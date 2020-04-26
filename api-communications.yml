@@ -26,9 +26,6 @@ logging:
     com.sun.mail.smtp: ERROR
   file: /var/logs/api-communications.log
 
-  mail.from=noreply@inatlas.com
-  mail.from.password=aragon224
-
 mail:
   from: noreply@inatlas.com
     password: aragon224
